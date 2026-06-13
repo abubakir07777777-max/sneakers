@@ -1,0 +1,684 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+  padding: 0 90px;
+  overflow-x: hidden;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* HEADER START */
+.site-header {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 60px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__list a {
+  font-size: 15px;
+  transition: 0.3s;
+  color: #69707d;
+  text-decoration: none;
+}
+
+.header__list a:hover {
+  color: #1d2026;
+}
+
+.header__image {
+  gap: 30px;
+  display: flex;
+  margin-left: auto;
+  position: relative;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #E4E9F2;
+}
+
+.cart__icon {
+  width: 22px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.cart__icon:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.us__img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.us__img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ff7e1b;
+}
+
+.images {
+  cursor: pointer;
+}
+
+/* SAVATCHA QUTISI (CART BOX) */
+.cart__box {
+  top: 70px;
+  right: -5px;
+  z-index: 100;
+  width: 360px;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cart__box h3 {
+  padding: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d2026;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.cart__content {
+  padding: 24px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div__your {
+  font-size: 16px;
+  font-weight: 700;
+  color: #69707d;
+  text-align: center;
+}
+
+.cart__product {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.cart__product__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.cart__product__info {
+  flex-grow: 1;
+}
+
+.cart__product__info p {
+  font-size: 16px;
+  color: #69707d;
+  margin-bottom: 4px;
+}
+
+.cart__product__info span {
+  color: #69707d;
+}
+
+.cart__product__info b {
+  color: #1d2026;
+  margin-left: 6px;
+}
+
+.delete {
+  width: 14px;
+  height: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete:hover {
+  opacity: 0.6;
+}
+
+.check__btn {
+  width: 100%;
+  height: 56px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 10px;
+  background: #ff7e1b;
+  transition: 0.3s;
+}
+
+.check__btn:hover {
+  opacity: 0.8;
+}
+
+.badge {
+  top: -8px;
+  right: 65px;
+  display: none;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  position: absolute;
+  border-radius: 999px;
+  background: #ff7e1b;
+}
+
+/* HERO SECTION */
+.hero {
+  max-width: 1110px;
+  display: flex;
+  margin: 90px auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero__top {
+  width: 445px;
+}
+
+.main_shoes__img {
+  width: 445px;
+  height: 445px;
+  display: block;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.hero__list {
+  gap: 31px;
+  display: flex;
+  margin-top: 32px;
+}
+
+.hero__item img {
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.hero__item img:hover {
+  opacity: 0.6;
+}
+
+.hero__item.active img {
+  opacity: 0.4;
+  border: 2px solid #ff7e1b;
+}
+
+.hero__inner {
+  width: 445px;
+}
+
+.inner__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff7e1b;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.inner__title3 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1d2026;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.inner__text {
+  font-size: 16px;
+  color: #69707d;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.price-box {
+  margin-bottom: 32px;
+}
+
+.top {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.new {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d2026;
+}
+
+.shegirma {
+  font-size: 16px;
+  padding: 4px 8px;
+  font-weight: 700;
+  color: #ff7e1b;
+  border-radius: 6px;
+  background: #ffeee2;
+}
+
+.old {
+  font-size: 16px;
+  font-weight: 700;
+  color: #b6bcc8;
+  text-decoration: line-through;
+}
+
+.button-container {
+  gap: 16px;
+  display: flex;
+}
+
+.counter1 {
+  width: 157px;
+  height: 56px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  align-items: center;
+  border-radius: 10px;
+  background: #f6f8fd;
+  justify-content: space-around;
+  color: #1d2026;
+}
+
+.plus, .minus {
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.plus:hover, .minus:hover {
+  opacity: 0.6;
+}
+
+.btn3 {
+  gap: 15px;
+  height: 56px;
+  width: 272px;
+  border: none;
+  display: flex;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 10px;
+  align-items: center;
+  background: #ff7e1b;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 50px rgba(255, 126, 27, 0.25);
+}
+
+.btn3:hover {
+  opacity: 0.7;
+}
+
+/* LIGHTBOX MODAL DIZAYNI */
+.imglar {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.imglar__content {
+  max-width: 550px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.close-imglar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-imglar:hover {
+  color: #ff7e1b;
+}
+
+.imglar-main {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.imglar__list {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.imglar__item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.imglar__item.active img {
+  opacity: 0.4;
+  border: 2px solid #ff7e1b;
+}
+
+.menu__btn, .close__btn {
+  display: none;
+}
+
+
+/* ... Oldingi barcha stillar saqlanadi, faqat Lightbox qismi shu bilan almashtiriladi: ... */
+
+/* LIGHTBOX MODAL DIZAYNI */
+.imglar {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+}
+
+.imglar__content {
+  max-width: 550px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.imglar__main-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.close-imglar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-imglar:hover {
+  color: #ff7e1b;
+}
+
+.imglar-main {
+  width: 100%;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NAVIGATSIYA STRELKALARI */
+.imglar__nav {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1d2026;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  z-index: 10;
+  user-select: none;
+}
+
+.imglar__nav:hover {
+  color: #ff7e1b;
+}
+
+.prev {
+  left: -28px; /* Tugmaning yarmi rasm chetidan chiqib turadi */
+}
+
+.next {
+  right: -28px;
+}
+
+.imglar__list {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+  justify-content: center;
+  width: 100%;
+}
+
+.imglar__item {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.imglar__item img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  transition: 0.2s;
+}
+
+.imglar__item img:hover {
+  opacity: 0.6;
+}
+
+.imglar__item.active img {
+  opacity: 0.4;
+  border: 2px solid #ff7e1b;
+}
+
+/* Qolgan mobil media so'rovlari o'zgarishsiz qoladi */
+
+/* RESPONSIVE (MOBIL) DIZAYN */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .site-header {
+    padding: 24px;
+    margin: 0;
+  }
+
+  .menu__btn {
+    display: block;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .logo img {
+    width: 138px;
+  }
+
+  .header__list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 92px 25px;
+    gap: 24px;
+    z-index: 1000;
+    transition: 0.3s;
+    box-shadow: 20px 0 40px rgba(0,0,0,0.1);
+  }
+
+  .header__list.active {
+    left: 0;
+  }
+
+  .close__btn {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .header__list a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d2026;
+  }
+
+  .header__image {
+    gap: 22px;
+  }
+
+  .us__img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .badge {
+    right: 50px;
+  }
+
+  .cart__box {
+    top: 65px;
+    left: 8px;
+    width: calc(100% - 16px);
+    right: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+
+  .hero__top, .hero__inner {
+    width: 100%;
+  }
+
+  .main_shoes__img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+  }
+
+  .hero__list {
+    display: none;
+  }
+
+  .hero__inner {
+    padding: 24px;
+  }
+
+  .inner__title3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .top {
+    margin-bottom: 0;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .counter1, .btn3 {
+    width: 100%;
+  }
+}
