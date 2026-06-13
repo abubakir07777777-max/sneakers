@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${productName}</p>
             <span>$${singleProductPrice.toFixed(2)} x ${cartCount} <b>$${totalPrice}</b></span>
           </div>
-          <img class="delete" src="image/icon-delete.svg" alt="delete">
+          <img class="delete" src="image/musr.svg" alt="">
         </div>
         <button class="check__btn">Checkout</button>
       `;
